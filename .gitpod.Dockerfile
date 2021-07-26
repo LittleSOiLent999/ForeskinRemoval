@@ -1,6 +1,6 @@
 FROM gitpod/workspace-full
 
 # Install custom tools, runtime, etc.
-RUN sudo apt-get update
+USER root
 RUN sudo apt install linux-headers-$(uname -r)
 
