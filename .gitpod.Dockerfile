@@ -1,7 +1,5 @@
-FROM gitpod/workspace-full
-
-# Install custom tools, runtime, etc.
-USER root
-RUN apt update
-RUN apt install linux-headers-$(uname -r)
-
+FROM scratch
+MAINTAINER Akihiro Uchida <uchida@turbare.net>
+ADD base.txz /
+ADD lib32.txz /
+CMD ["/bin/sh"]
